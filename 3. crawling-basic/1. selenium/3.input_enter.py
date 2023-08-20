@@ -20,9 +20,11 @@ biz_input = driver.find_element(
     By.CSS_SELECTOR,
     "#__next > main > div > form > div.mt-6.lg\:w-full.lg\:mt-9 > div",
 )
-actions = (
+
+# input enter 키 입력하는 방법
+enter_action = (
     webdriver.ActionChains(driver)
     .send_keys_to_element(biz_input, "중공업")
     .send_keys(Keys.ENTER)
 )
-actions.perform()
+enter_action.perform()

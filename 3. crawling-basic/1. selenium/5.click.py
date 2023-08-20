@@ -22,7 +22,6 @@ biz_input = driver.find_element(
     "#__next > main > div > form > div.mt-6.lg\:w-full.lg\:mt-9 > div",
 )
 
-# input enter 키 입력하는 방법
 enter_action = (
     webdriver.ActionChains(driver)
     .send_keys_to_element(biz_input, "중공업")
@@ -36,6 +35,6 @@ section_element = driver.find_element(By.CSS_SELECTOR, "#__next > main > div > s
 
 a_tag_elements = section_element.find_elements(By.CSS_SELECTOR, "a")
 
-
 for a_tag in a_tag_elements:
-    print(a_tag.text)
+    a_tag.click()  # 클릭은 요소(element)를 찾으면 매우 쉽게 할 수 있습니다.
+    break

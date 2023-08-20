@@ -1,3 +1,5 @@
 .vscode
 .python-version
 
+sample.xlsx
+__pycache__
